@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 
+import '../assets/css/pages/Home.css';
+
 const Home = () => {
 	return (
 		<div>
