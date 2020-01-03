@@ -7,6 +7,7 @@ const Home = () => {
 		<div>
 			<Header title='Space App' desc='See the space' />
 			<Navbar />
+			<section className='container'></section>
 		</div>
 	);
 };
