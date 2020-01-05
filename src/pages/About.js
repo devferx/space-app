@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
+import Layout from '../components/Layout';
+
 const About = () => {
 	return (
 		<div>
-			<Header title='Space App' desc='See the space' />
-			<Navbar />
-			<h1>Desde About</h1>
+			<Layout title='About Us' desc='Contact me'>
+				<h1>Desde About</h1>
+			</Layout>
 		</div>
 	);
 };

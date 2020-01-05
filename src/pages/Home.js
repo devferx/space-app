@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
+import Layout from '../components/Layout';
 import Apod from '../components/Apod';
 import { ApiKey } from '../constants/index';
 
@@ -21,11 +20,11 @@ const Home = () => {
 	}, []);
 	return (
 		<div>
-			<Header title='Space App' desc='See the space' />
-			<Navbar />
-			<section className='container'>
-				<Apod {...apod} loading={loading} />
-			</section>
+			<Layout title='Space App' desc='See the space'>
+				<section className='container'>
+					<Apod {...apod} loading={loading} />
+				</section>
+			</Layout>
 		</div>
 	);
 };

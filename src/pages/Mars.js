@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
 import { ApiKey } from '../constants/index';
 import PhotoList from '../components/PhotoList';
+import Layout from '../components/Layout';
 
 import '../assets/css/pages/Mars.css';
 
@@ -20,11 +19,11 @@ const Mars = () => {
 
 	return (
 		<div>
-			<Header title='Mars Photos' desc='See Mars' />
-			<Navbar />
-			<section className='photo-container'>
-				<PhotoList photos={mars} />
-			</section>
+			<Layout title='Mars Photos' desc='See Mars'>
+				<section className='photo-container'>
+					<PhotoList photos={mars} />
+				</section>
+			</Layout>
 		</div>
 	);
 };
