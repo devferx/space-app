@@ -3,7 +3,6 @@ import axios from 'axios';
 import { ApiKey } from '../constants/index';
 import PhotoList from '../components/PhotoList';
 import Layout from '../components/Layout';
-
 import '../assets/css/pages/Mars.css';
 
 const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=${ApiKey}`;
