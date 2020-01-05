@@ -1,15 +1,22 @@
 import React from 'react';
 import '../assets/css/components/Apod.css';
 
-const Apod = ({ copyright, title, url, hdurl, explanation }) => (
-	<div className='card'>
-		{copyright ? (
-			<>
+const Apod = ({
+	copyright,
+	title,
+	url,
+	hdurl,
+	explanation,
+	loading
+}) => {
+	if (!loading) {
+		return (
+			<div className='card'>
 				<div
 					className='img'
 					style={{ backgroundImage: `url(${url})` }}></div>
 				<div className='autor'>
-					<span>by: {copyright}</span>
+					{copyright && <span>by: {copyright}</span>}
 				</div>
 				<div className='title'>
 					<span>{title}</span>
@@ -26,13 +33,17 @@ const Apod = ({ copyright, title, url, hdurl, explanation }) => (
 						View HD image
 					</a>
 				</div>
-			</>
-		) : (
-			<div>
-				<h1>Loading...</h1>
 			</div>
-		)}
-	</div>
-);
+		);
+	} else {
+		return (
+			<div className='cargando-container'>
+				<span className='cargando-container--loading'>
+					Cargando ...
+				</span>
+			</div>
+		);
+	}
+};
 
 export default Apod;

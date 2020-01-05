@@ -68,3 +68,12 @@
 	color: black;
 	text-decoration: none;
 }
+
+.cargando-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	font-family: 'Ubuntu', sans-serif;
+}

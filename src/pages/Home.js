@@ -11,15 +11,20 @@ const URL = `https://api.nasa.gov/planetary/apod?api_key=${ApiKey}`;
 
 const Home = () => {
 	const [apod, setApod] = useState();
+	const [loading, setLoading] = useState(false);
 	useEffect(() => {
-		axios.get(URL).then(resp => setApod(resp['data']));
+		setLoading(true);
+		axios.get(URL).then(resp => {
+			setLoading(false);
+			setApod(resp['data']);
+		});
 	}, []);
 	return (
 		<div>
 			<Header title='Space App' desc='See the space' />
 			<Navbar />
 			<section className='container'>
-				<Apod {...apod} />
+				<Apod {...apod} loading={loading} />
 			</section>
 		</div>
 	);
