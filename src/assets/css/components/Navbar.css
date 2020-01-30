@@ -1,6 +1,7 @@
 .navbar {
 	margin-top: 15px;
 	display: flex;
+	align-items: center;
 	justify-content: center;
 }
 
@@ -24,4 +25,11 @@
 .active .navbar--link {
 	background-color: black;
 	color: white;
+}
+
+@media screen and (max-width: 768px) {
+	.navbar--link {
+		min-height: 56px;
+		min-width: 60px;
+	}
 }
