@@ -37,4 +37,22 @@
 	border: solid 3px black;
 	padding: 5px;
 	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+}
+
+@media screen and (max-width: 768px) {
+	.main-container {
+		flex-direction: column;
+	}
+	.caja {
+		margin: 0px;
+		min-width: 200px;
+		max-height: 200px;
+		font-size: 0.8em;
+	}
+
+	.container-contact {
+		align-self: center;
+		width: 80%;
+	}
 }
