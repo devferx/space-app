@@ -32,4 +32,8 @@
 		min-height: 56px;
 		min-width: 60px;
 	}
+	.navbar {
+		margin-right: auto;
+		margin-left: auto;
+	}
 }

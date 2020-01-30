@@ -15,6 +15,7 @@
 .header--title {
 	font-size: 60px;
 	margin: 15px 0px;
+	text-align: center;
 }
 
 .header--desc {
