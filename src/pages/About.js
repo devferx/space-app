@@ -10,7 +10,7 @@ const About = () => {
 				<div className='contact'>
 					<p>Contact</p>
 				</div>
-				<div className='container'>
+				<div className='container-contact'>
 					<div className='caja'>
 						<h3>Fernando Quinteros G.</h3>
 						<p>

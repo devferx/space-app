@@ -19,8 +19,8 @@
 	justify-content: space-between;
 }
 
-.container {
-	min-height: 100%;
+.container-contact {
+	min-height: calc(100vh - 275px);
 	width: 25%;
 	background-color: black;
 	margin: 20px 0px 0px 0px;
@@ -30,7 +30,7 @@
 }
 
 .caja {
-	margin-left: -260px;
+	margin-left: -300px;
 	background-color: white;
 	min-height: 300px;
 	width: 300px;
