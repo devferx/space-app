@@ -1,24 +1,31 @@
 .card {
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	padding: 20px;
+	margin: 20px;
 	box-shadow: 5px 4px 26px rgba(0, 0, 0, 0.5);
 	border-radius: 13px;
 	display: grid;
-	grid-template-rows: repeat(6, 1fr);
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: 17% 17% 17% 200px 100px;
+	grid-template-rows: 30px 50px 150px 50px;
+	justify-content: center;
+	grid-template-areas:
+		'. . . autor autor'
+		'img img img titulo titulo'
+		'img img img desc desc'
+		'img img img boton boton';
+
 	gap: 10px;
 }
 
 .img {
-	grid-column: 2 / span 5;
-	grid-row: 2 / span 4;
+	grid-area: img;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .autor {
-	grid-column: 7 / span 5;
+	grid-area: autor;
 	display: flex;
 	align-items: flex-end;
 	font-family: 'Roboto', sans-serif;
@@ -27,22 +34,21 @@
 }
 
 .title {
-	grid-column: 7 / span 5;
+	grid-area: titulo;
 }
 
 .title span {
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: 200;
-	font-size: 40px;
+	font-size: 1.6em;
 	line-height: 59px;
 	display: flex;
 	align-items: center;
 }
 
 .desc {
-	grid-column: 7 / span 5;
-	grid-row: 3 / span 2;
+	grid-area: desc;
 	overflow: auto;
 }
 
@@ -54,7 +60,7 @@
 }
 
 .button-container {
-	grid-column: 7 / span 5;
+	grid-area: boton;
 	border: 3px solid black;
 	color: black;
 	width: 100%;
@@ -76,4 +82,24 @@
 	align-items: center;
 	font-size: 50px;
 	font-family: 'Ubuntu', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+	.card {
+		grid-template-columns: repeat(3, 30%);
+		grid-template-rows: 100px 100px auto auto 100px 200px 50px 75px;
+		grid-template-areas:
+			'img img img'
+			'img img img'
+			'autor autor .'
+			'titulo titulo titulo'
+			'desc desc desc'
+			'desc desc desc'
+			'desc desc desc'
+			'boton boton boton ';
+	}
+	.title {
+		display: flex;
+		align-items: center;
+	}
 }

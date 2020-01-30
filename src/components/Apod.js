@@ -19,7 +19,9 @@ const Apod = ({
 					{copyright && <span>by: {copyright}</span>}
 				</div>
 				<div className='title'>
-					<span>{title}</span>
+					<span>
+						<i>{title}</i>
+					</span>
 				</div>
 				<div className='desc'>
 					<span>{explanation}</span>
