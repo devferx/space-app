@@ -1,0 +1,40 @@
+.contact {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: 20px;
+	background-color: black;
+	color: white;
+	font-size: 50px;
+	width: 40%;
+	height: 100px;
+	text-align: right;
+	padding-right: 15px;
+}
+
+.main-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container {
+	min-height: 100%;
+	width: 25%;
+	background-color: black;
+	margin: 20px 0px 0px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.caja {
+	margin-left: -260px;
+	background-color: white;
+	min-height: 300px;
+	width: 300px;
+	border: solid 3px black;
+	padding: 5px;
+	font-family: 'Roboto', sans-serif;
+}
